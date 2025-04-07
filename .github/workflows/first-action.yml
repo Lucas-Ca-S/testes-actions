@@ -10,4 +10,4 @@ jobs:
       run: RESULT=$(cat test.txt)
       
     - name: Echo 
-      run: echo $RESULT
+      run: echo "Res: $RESULT"
