@@ -6,8 +6,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: catFile
-      run: RESULT=$(cat test.txt) >> "$GITHUB_ENV"
-      
-    - name: Echo 
-      run: echo ${{ env.result }}
+    - name: Read file
+      id: read_file
+      run: echo "RESULT=$(cat test.txt)" >> "$GITHUB_ENV"
+
+    - name: Echo
+      run: echo "Res- ${{ env.RESULT }}"
