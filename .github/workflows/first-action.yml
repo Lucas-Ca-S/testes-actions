@@ -14,7 +14,7 @@ jobs:
         printf 'apiVersion: v1\nkind: ConfigMap\nmetadata:\n\nname: game-demo\ndata:\n' >> "$RESULTFILE"
         cd cfg
         for CONF in ls; do
-          echo "  $CONF: |" >> "$RESULTFILE"
+          echo "  $CONF: |" >> "../$RESULTFILE"
           ls
           while IFS= read -r LINE || [ -n "$LINE" ]; do
             echo "    $LINE" >> "../$RESULTFILE"
