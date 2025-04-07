@@ -19,6 +19,7 @@ jobs:
           while IFS= read -r LINE || [ -n "$LINE" ]; do
             echo "    $LINE" >> "$RESULTFILE"
           done < $CONF
+          cat $RESULTFILE
         done
         
     - name: Cat
