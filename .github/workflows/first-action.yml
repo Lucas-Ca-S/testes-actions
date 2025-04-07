@@ -13,7 +13,7 @@ jobs:
         RESULTFILE=result.yml
         printf 'apiVersion: v1\nkind: ConfigMap\nmetadata:\n\nname: game-demo\ndata:' >> "$RESULTFILE"
         ls
-        for CONF in cgf/*; do
+        for CONF in $(ls cfg); do
           echo "  $CONF: |" >> "$RESULTFILE"
 
           while IFS= read -r LINE || [ -n "$LINE" ]; do
