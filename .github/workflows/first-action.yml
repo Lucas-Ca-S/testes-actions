@@ -9,7 +9,7 @@ jobs:
     - name: Append files
       id: read_file
       run: |
-        $RESULTFILE = result.yml
+        RESULTFILE = result.yml
         printf 'apiVersion: v1\nkind: ConfigMap\nmetadata:\n\nname: game-demo\ndata:' >> "$RESULTFILE"
         for CONF in cgf/*; do
           echo "  $CONF: |" >> "$RESULTFILE"
