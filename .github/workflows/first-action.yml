@@ -23,4 +23,4 @@ jobs:
         done
         
     - name: Cat
-      run: cat $RESULTFILE
+      run: cat result.yml
